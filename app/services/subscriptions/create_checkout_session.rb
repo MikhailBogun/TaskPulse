@@ -16,7 +16,7 @@ module Subscriptions
 
       session = @user.payment_processor.checkout(
         mode: "subscription",
-        line_items: [{ price: price_id, quantity: 1 }],
+        line_items: [ { price: price_id, quantity: 1 } ],
         success_url: "#{ENV.fetch("FRONTEND_URL")}/billing?success=true",
         cancel_url: "#{ENV.fetch("FRONTEND_URL")}/billing?canceled=true",
         allow_promotion_codes: true

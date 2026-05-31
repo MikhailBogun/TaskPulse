@@ -12,7 +12,7 @@ class CreateAlertRules < ActiveRecord::Migration[7.2]
       t.timestamps
     end
 
-    add_index :alert_rules, [:user_id, :active]
-    add_index :alert_rules, [:rule_type, :active]
+    add_index :alert_rules, [ :user_id, :active ]
+    add_index :alert_rules, [ :rule_type, :active ]
   end
 end

@@ -9,8 +9,8 @@ class CreatePayTables < ActiveRecord::Migration[7.2]
       t.datetime :deleted_at
       t.timestamps
     end
-    add_index :pay_customers, [:owner_type, :owner_id, :processor, :deleted_at], name: "pay_customers_owner_processor_index"
-    add_index :pay_customers, [:processor, :processor_id]
+    add_index :pay_customers, [ :owner_type, :owner_id, :processor, :deleted_at ], name: "pay_customers_owner_processor_index"
+    add_index :pay_customers, [ :processor, :processor_id ]
 
     create_table :pay_merchants do |t|
       t.belongs_to :owner, polymorphic: true, index: false, null: false
@@ -20,8 +20,8 @@ class CreatePayTables < ActiveRecord::Migration[7.2]
       t.public_send Pay.json_column_type, :data
       t.timestamps
     end
-    add_index :pay_merchants, [:owner_type, :owner_id, :processor]
-    add_index :pay_merchants, [:processor, :processor_id]
+    add_index :pay_merchants, [ :owner_type, :owner_id, :processor ]
+    add_index :pay_merchants, [ :processor, :processor_id ]
 
     create_table :pay_payment_methods do |t|
       t.belongs_to :customer, null: false
@@ -31,7 +31,7 @@ class CreatePayTables < ActiveRecord::Migration[7.2]
       t.public_send Pay.json_column_type, :data
       t.timestamps
     end
-    add_index :pay_payment_methods, [:customer_id, :processor_id], unique: true
+    add_index :pay_payment_methods, [ :customer_id, :processor_id ], unique: true
 
     create_table :pay_subscriptions do |t|
       t.belongs_to :customer, null: false
@@ -51,7 +51,7 @@ class CreatePayTables < ActiveRecord::Migration[7.2]
       t.boolean :on_trial, default: false
       t.timestamps
     end
-    add_index :pay_subscriptions, [:customer_id, :processor_id], unique: true
+    add_index :pay_subscriptions, [ :customer_id, :processor_id ], unique: true
     add_index :pay_subscriptions, :status
 
     create_table :pay_charges do |t|
@@ -67,7 +67,7 @@ class CreatePayTables < ActiveRecord::Migration[7.2]
       t.datetime :disputed_at
       t.timestamps
     end
-    add_index :pay_charges, [:customer_id, :processor_id], unique: true
+    add_index :pay_charges, [ :customer_id, :processor_id ], unique: true
 
     create_table :pay_webhooks do |t|
       t.string :processor
