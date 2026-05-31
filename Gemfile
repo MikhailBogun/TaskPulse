@@ -20,7 +20,7 @@ gem "rack-cors"
 gem "blueprinter", "~> 0.25"
 
 # Background jobs
-gem "sidekiq", "~> 7.0"
+gem "sidekiq", "~> 8.0"
 gem "sidekiq-cron", "~> 1.12"
 
 # Payments
