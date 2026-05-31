@@ -21,7 +21,7 @@ gem "blueprinter", "~> 0.25"
 
 # Background jobs
 gem "sidekiq", "~> 7.0"
-gem "sidekiq-cron", "~> 1.12"
+gem "sidekiq-cron", "~> 2.4"
 
 # Payments
 gem "pay", "~> 6.0"
