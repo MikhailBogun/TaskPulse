@@ -17,7 +17,7 @@ gem "devise-jwt", "~> 0.11"
 gem "rack-cors"
 
 # Serialization
-gem "blueprinter", "~> 0.25"
+gem "blueprinter", "~> 1.3"
 
 # Background jobs
 gem "sidekiq", "~> 7.0"
