@@ -24,7 +24,7 @@ gem "sidekiq", "~> 7.0"
 gem "sidekiq-cron", "~> 1.12"
 
 # Payments
-gem "pay", "~> 6.0"
+gem "pay", "~> 11.6"
 gem "stripe", "~> 10.0"
 
 # HTTP client for external APIs
