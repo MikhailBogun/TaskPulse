@@ -54,7 +54,7 @@ group :development, :test do
   gem "rspec-rails", "~> 6.1"
   gem "factory_bot_rails"
   gem "faker"
-  gem "shoulda-matchers", "~> 5.3"
+  gem "shoulda-matchers", "~> 7.0"
   gem "pry-byebug"
   gem "dotenv-rails"
 end
