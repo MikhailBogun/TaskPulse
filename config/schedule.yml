@@ -1,0 +1,17 @@
+task_scheduler:
+  cron: "* * * * *"
+  class: "TaskSchedulerJob"
+  queue: default
+  description: "Run scheduled tasks every minute"
+
+crypto_alert_check:
+  cron: "*/5 * * * *"
+  class: "CryptoAlertJob"
+  queue: low
+  description: "Check crypto price alerts every 5 minutes"
+
+github_sync:
+  cron: "0 * * * *"
+  class: "GithubSyncJob"
+  queue: low
+  description: "Sync GitHub repo stats every hour"
