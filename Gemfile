@@ -25,7 +25,7 @@ gem "sidekiq-cron", "~> 1.12"
 
 # Payments
 gem "pay", "~> 6.0"
-gem "stripe", "~> 10.0"
+gem "stripe", "~> 13.5"
 
 # HTTP client for external APIs
 gem "faraday", "~> 2.9"
