@@ -40,11 +40,8 @@ gem "prawn", "~> 2.5"
 # Active Storage with S3
 gem "aws-sdk-s3", require: false
 
-# Monitoring
-gem "yabeda-rails"
-gem "yabeda-puma-plugin"
-gem "yabeda-sidekiq"
-gem "prometheus-client"
+# Pin to avoid Ruby 3.3 SyntaxError with connection_pool 3.x
+gem "connection_pool", "~> 2.4"
 
 # Pagination
 gem "kaminari"
